@@ -83,6 +83,7 @@
         <attr name="tv_verticalSpacingWithMargins" format="dimension" />
         <attr name="tv_horizontalSpacingWithMargins" format="dimension" />
         <attr name="tv_selectedItemIsCentered" format="boolean" />
+        <attr name="tv_layoutManager" format="string" />
     </declare-styleable>
 
 </resources>
