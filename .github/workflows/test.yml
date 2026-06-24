@@ -14,11 +14,10 @@ jobs:
           python-version: '3.8'
       - name: Setup Android SDK
         uses: android-actions/setup-android@v3
-      - name: Create local.properties
+      - name: Setup config
         run: |
           echo "sdk.dir=$ANDROID_HOME" > local.properties
-          echo "ndk.dir=$ANDROID_HOME/ndk-bundle" >> local.properties
-          echo "build.python=$(which python3)" >> local.properties
+          echo "buildPython=$(python3 -c 'import sys; print(sys.executable)')" >> gradle.properties
       - name: Build With Gradle
         run: |
           chmod +x gradlew
