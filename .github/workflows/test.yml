@@ -14,6 +14,11 @@ jobs:
       - name: Setup Android SDK
         uses: android-actions/setup-android@v3
 
+      - name: Create local.properties
+        run: |
+          echo "sdk.dir=$ANDROID_HOME" > local.properties
+          echo "ndk.dir=$ANDROID_HOME/ndk-bundle" >> local.properties
+
       - name: Build With Gradle
         run: |
           chmod +x gradlew
