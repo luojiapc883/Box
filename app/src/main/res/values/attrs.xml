@@ -77,4 +77,12 @@
         <attr name="topDelta" />
     </declare-styleable>
 
+
+    <!-- tv-recyclerview custom attributes (inline replacement) -->
+    <declare-styleable name="TvRecyclerView">
+        <attr name="tv_verticalSpacingWithMargins" format="dimension" />
+        <attr name="tv_horizontalSpacingWithMargins" format="dimension" />
+        <attr name="tv_selectedItemIsCentered" format="boolean" />
+    </declare-styleable>
+
 </resources>
