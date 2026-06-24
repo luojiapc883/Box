@@ -14,14 +14,10 @@ jobs:
           python-version: '3.8'
       - name: Setup Android SDK
         uses: android-actions/setup-android@v3
-      - name: Setup config
-        run: |
-          echo "sdk.dir=$ANDROID_HOME" > local.properties
-          echo "buildPython=${pythonLocation}/bin/python3" > gradle.properties
       - name: Build With Gradle
         run: |
           chmod +x gradlew
-          ./gradlew assemblerelease --build-cache --parallel --daemon --warning-mode all
+          ./gradlew assemblerelease --no-daemon --build-cache --parallel --warning-mode all
       - name: Prepare App
         run: |
           mkdir -p ${{ github.workspace }}/apk/
