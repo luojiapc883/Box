@@ -20,6 +20,9 @@ buildscript {
 
 allprojects {
     repositories {
+        flatDir {
+            dirs "$projectDir/libs", "$rootDir/app/libs"
+        }
         google()
         mavenCentral()
         gradlePluginPortal()
